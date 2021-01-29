@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm" style="text-align:center">
+            <h2> Increment/Decrement Functionality</h2>
+        </div>
+    </div>
+    <div class="row" style="margin: 40px">
+        <div class="col-sm">
+            Increment All <span class="bi bi-plus-circle-fill" (click)="increamentAll()">
+            </span>
+            Decrement All <span class="bi bi-dash-circle-fill" (click)="decrementAll()"> </span>
+        </div>
+    </div>
+    <div class="row" style="margin: 40px">
+        <div class="col-sm" *ngFor="let num of countNumbers; let i = index" style="margin: 20px">
+            <input name="countNumbers_{{i}}" type="number" [(ngModel)]="num.number" #ngModel>
+            <i class="bi bi-dash-circle-fill" (click)="decreament(i)"
+                style="margin:20px">
+            </i>
+            <span class="bi bi-plus-circle-fill" (click)="increament(i)">
+            </span>
+        </div>
+    </div>
+</div>
